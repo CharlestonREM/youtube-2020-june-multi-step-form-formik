@@ -16,13 +16,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>Multi-Step Form</title>
+        <title>Multi-Step Form </title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
         <AppBar position="fixed">
           <Toolbar variant="dense">
-            <Typography variant="h6">Multi-Step Form</Typography>
+            <Typography variant="h6">Multi-Step Form - 3 Parent Steps in UI with 7-8 Steps in Stepper Parent</Typography>
           </Toolbar>
         </AppBar>
 
