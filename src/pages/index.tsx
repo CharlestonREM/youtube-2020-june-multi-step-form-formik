@@ -23,7 +23,7 @@ export default function Home() {
             console.log('values', values);
           }}
         >
-          <FormikStep label="Personal Data">
+          <FormikStep label="Tell Us About Your Property">
             <Box paddingBottom={2}>
               <Field fullWidth name="firstName" component={TextField} label="First Name" />
             </Box>
@@ -39,8 +39,9 @@ export default function Home() {
               />
             </Box>
           </FormikStep>
+
           <FormikStep
-            label="Bank Accounts"
+            label="Select your base service"
             validationSchema={object({
               money: mixed().when('millionaire', {
                 is: true,
@@ -54,6 +55,7 @@ export default function Home() {
               }),
             })}
           >
+            
             <Box paddingBottom={2}>
               <Field
                 fullWidth
@@ -64,11 +66,100 @@ export default function Home() {
               />
             </Box>
           </FormikStep>
-          <FormikStep label="More Info">
+
+
+
+
+
+          <FormikStep
+            label="hidden child step 3"
+            validationSchema={object({
+              money: mixed().when('millionaire', {
+                is: true,
+                then: number()
+                  .required()
+                  .min(
+                    1_000_000,
+                    'Because you said you are a millionaire you need to have 1 million'
+                  ),
+                otherwise: number().required(),
+              }),
+            })}
+          >
+            
+            <Box paddingBottom={2}>
+              <Field
+                fullWidth
+                name="money"
+                type="number"
+                component={TextField}
+                label="All the money I have"
+              />
+            </Box>
+          </FormikStep>
+
+          <FormikStep
+            label="hidden child step 4"
+            validationSchema={object({
+              money: mixed().when('millionaire', {
+                is: true,
+                then: number()
+                  .required()
+                  .min(
+                    1_000_000,
+                    'Because you said you are a millionaire you need to have 1 million'
+                  ),
+                otherwise: number().required(),
+              }),
+            })}
+          >
+            
+            <Box paddingBottom={2}>
+              <Field
+                fullWidth
+                name="money"
+                type="number"
+                component={TextField}
+                label="All the money I have"
+              />
+            </Box>
+          </FormikStep>
+
+          <FormikStep
+            label="hidden child step 5"
+            validationSchema={object({
+              money: mixed().when('millionaire', {
+                is: true,
+                then: number()
+                  .required()
+                  .min(
+                    1_000_000,
+                    'Because you said you are a millionaire you need to have 1 million'
+                  ),
+                otherwise: number().required(),
+              }),
+            })}
+          >
+            
+            <Box paddingBottom={2}>
+              <Field
+                fullWidth
+                name="money"
+                type="number"
+                component={TextField}
+                label="All the money I have"
+              />
+            </Box>
+          </FormikStep>
+
+{/* parent step 3 */}
+
+          <FormikStep label="Provide Some Info">
             <Box paddingBottom={2}>
               <Field fullWidth name="description" component={TextField} label="Description" />
             </Box>
           </FormikStep>
+          
         </FormikStepper>
       </CardContent>
     </Card>
