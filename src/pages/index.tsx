@@ -1,3 +1,4 @@
+//IMPORTS
 import { Box, Button, Card, CardContent, CircularProgress, Grid, Step, StepLabel, Stepper } from '@material-ui/core';
 import { Field, Form, Formik, FormikConfig, FormikValues } from 'formik';
 import { CheckboxWithLabel, TextField } from 'formik-material-ui';
@@ -6,6 +7,8 @@ import { mixed, number, object } from 'yup';
 
 const sleep = (time) => new Promise((acc) => setTimeout(acc, time));
 
+
+//EXPORTS
 export default function Home() {
   return (
     <Card>
